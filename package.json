@@ -1,0 +1,35 @@
+{
+  "name": "jest-os-detection",
+  "version": "1.0.0",
+  "description": "Allow to specify on which platform to run jest tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "qmenoret",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.4",
+    "jest": "^24.9.0",
+    "jest-junit": "^6.3.0",
+    "prettier": "^1.19.1"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "forceExit": true
+  }
+}
