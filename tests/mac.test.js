@@ -1,8 +1,6 @@
-import nada from '../index'
+import { patch } from '../src/patch-jest'
 
-jest.mock('os', () => ({
-  platform: () => 'darwin',
-}))
+patch('darwin')
 
 describe('Mac test suite', () => {
   describe('for "it"', () => {

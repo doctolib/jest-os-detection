@@ -1,8 +1,6 @@
-import nada from '../index'
+import { patch } from '../src/patch-jest'
 
-jest.mock('os', () => ({
-  platform: () => 'win32',
-}))
+patch('win32')
 
 describe('Windows test suite', () => {
   describe('for "it"', () => {
@@ -47,9 +45,7 @@ describe('Windows test suite', () => {
     })
   })
 
-  describe.onWindows.each(
-    [1]
-  )('describe.onWindows.each', value => {
+  describe.onWindows.each([1])('describe.onWindows.each', value => {
     it('it', () => {
       expect(value).toBe(1)
     })
@@ -61,12 +57,9 @@ describe('Windows test suite', () => {
     })
   })
 
-  describe.onMac.each(
-    [1,2,3]
-  )('describe.onMac.each', () => {
+  describe.onMac.each([1, 2, 3])('describe.onMac.each', () => {
     it('it', () => {
       throw new Error('Should not be run')
     })
   })
 })
-
