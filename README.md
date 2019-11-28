@@ -51,18 +51,18 @@ describe.onWindows.each([1, 2, 3])('several describe on windows', describeValue 
 ## Supported features
 
 Supported commands:
-* describe()
-* it()
-* test()
+* `describe()`
+* `it()`
+* `test()`
 
 Supported platform:
-* <command>.onWindows()
-* <command>.onMac()
-* <command>.onLinux()
+* `<command>.onWindows()`
+* `<command>.onMac()`
+* `<command>.onLinux()`
 
 Supported sub-commands:
-* <command>.<platform>.each()
-* <command>.<platform>.only()
-* <command>.<platform>.skip()
-* <command>.<platform>.skip.each()
-* <command>.<platform>.only.each()
+* `<command>.<platform>.each()`
+* `<command>.<platform>.only()`
+* `<command>.<platform>.skip()`
+* `<command>.<platform>.skip.each()`
+* `<command>.<platform>.only.each()`
