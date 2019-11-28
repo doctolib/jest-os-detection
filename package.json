@@ -1,6 +1,6 @@
 {
   "name": "jest-os-detection",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Allow to specify on which platform to run jest tests",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,14 @@
     "version": "babel src --out-dir lib"
   },
   "author": "qmenoret",
-  "keywords": ["jest", "windows", "linux", "mac", "os", "detection"],
+  "keywords": [
+    "jest",
+    "windows",
+    "linux",
+    "mac",
+    "os",
+    "detection"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
