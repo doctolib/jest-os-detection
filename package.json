@@ -8,6 +8,7 @@
     "version": "babel src --out-dir lib"
   },
   "author": "qmenoret",
+  "keywords": ["jest", "windows", "linux", "mac", "os", "detection"],
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
