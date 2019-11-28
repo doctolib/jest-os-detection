@@ -1,11 +1,11 @@
 
-// TODO handle each platform + group of platform
-// 'aix', 'darwin', 'freebsd', 'linux', 'openbsd', 'sunos', and 'win32'
-
 const AVAILABLE_PLATFORMS = {
   onWindows: ['win32'],
   onMac: ['darwin'],
   onLinux: ['linux'],
+  skipWindows: ['linux', 'darwin'],
+  skipMac: ['linux', 'win32'],
+  skipLinux: ['darwin', 'win32'],
 }
 
 export function patch(currentPlatform) {

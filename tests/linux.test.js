@@ -62,4 +62,10 @@ describe('Linux test suite', () => {
       throw new Error('Should not be run')
     })
   })
+
+  describe.skipLinux('describe.skipLinux', () => {
+    it('should not be executed', () => {
+      throw new Error('should not be run')
+    })
+  })
 })

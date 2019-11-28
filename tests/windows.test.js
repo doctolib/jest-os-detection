@@ -62,4 +62,10 @@ describe('Windows test suite', () => {
       throw new Error('Should not be run')
     })
   })
+
+  describe.skipLinux('describe.skipLinux', () => {
+    it('should be executed', () => {
+      expect(1).toBe(1)
+    })
+  })
 })
