@@ -6,6 +6,9 @@ A common use case would be to have a CI running on different OS
 Unfortunately, some of your tests should only run on a specific platform
 due to OS specific features.
 
+All tests that should not be run on the current
+platform will be automatically skipped.
+
 ## Install
 
 ```bash
@@ -59,6 +62,9 @@ Supported platform:
 * `<command>.onWindows()`
 * `<command>.onMac()`
 * `<command>.onLinux()`
+* `<command>.skipWindows()`
+* `<command>.skipMac()`
+* `<command>.skipLinux()`
 
 Supported sub-commands:
 * `<command>.<platform>.each()`
