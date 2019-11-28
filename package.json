@@ -1,6 +1,6 @@
 {
   "name": "jest-os-detection",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Allow to specify on which platform to run jest tests",
   "main": "lib/index.js",
   "scripts": {
