@@ -9,7 +9,7 @@ const AVAILABLE_PLATFORMS = {
 }
 
 export function patch(currentPlatform) {
-  function newDefinition(method, expectedPlatform, fallbackImplem = () => {}) {
+  function newDefinition(method, expectedPlatform, fallbackImplem) {
     if (AVAILABLE_PLATFORMS[expectedPlatform] && AVAILABLE_PLATFORMS[expectedPlatform].includes(currentPlatform)) {
       return method
     } else {
@@ -19,7 +19,7 @@ export function patch(currentPlatform) {
 
   Object.keys(AVAILABLE_PLATFORMS).forEach(platform => {
     ;[describe, it, test].forEach(method => {
-      method[platform] = newDefinition((...args) => method(...args), platform)
+      method[platform] = newDefinition(method, platform, method.skip)
       method[platform].each = newDefinition(method.each, platform, method.skip.each)
       ;['skip', 'only'].forEach(mode => {
         method[platform][mode] = newDefinition(method[mode], platform, method.skip)
