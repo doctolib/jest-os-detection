@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "version": "babel index.js --out-dir lib"
+    "version": "babel src --out-dir lib"
   },
   "author": "qmenoret",
   "license": "MIT",
