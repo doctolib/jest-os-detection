@@ -1,10 +1,11 @@
 {
   "name": "jest-os-detection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allow to specify on which platform to run jest tests",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "version": "babel src --out-dir lib"
   },
   "author": "qmenoret",
   "license": "MIT",
