@@ -9,28 +9,21 @@ const AVAILABLE_PLATFORMS = {
 }
 
 export function patch(currentPlatform) {
-  function wololo(method, expectedPlatform, fallbackImplem = () => {}) {
+  function newDefinition(method, expectedPlatform, fallbackImplem = () => {}) {
     if (currentPlatform === AVAILABLE_PLATFORMS[expectedPlatform]) {
       return method
     } else {
       return fallbackImplem
     }
   }
-  function newDefinition(method, expectedPlatform, ...args) {
-    if (currentPlatform === AVAILABLE_PLATFORMS[expectedPlatform]) {
-      return method(...args)
-    } else {
-      return () => {}
-    }
-  }
 
   Object.keys(AVAILABLE_PLATFORMS).forEach(platform => {
     ;[describe, it, test].forEach(method => {
-      method[platform] = wololo((...args) => method(...args), platform)
-      method[platform].each = wololo(method.each, platform, method.skip.each)
+      method[platform] = newDefinition((...args) => method(...args), platform)
+      method[platform].each = newDefinition(method.each, platform, method.skip.each)
       ;['skip', 'only'].forEach(mode => {
-        method[platform][mode] = wololo(method[mode], platform, method.skip)
-        method[platform][mode] = wololo(method[mode], platform, method.skip.each)
+        method[platform][mode] = newDefinition(method[mode], platform, method.skip)
+        method[platform][mode] = newDefinition(method[mode], platform, method.skip.each)
       })
     })
   })
