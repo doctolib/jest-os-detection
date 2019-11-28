@@ -3,14 +3,14 @@
 // 'aix', 'darwin', 'freebsd', 'linux', 'openbsd', 'sunos', and 'win32'
 
 const AVAILABLE_PLATFORMS = {
-  onWindows: 'win32',
-  onMac: 'darwin',
-  onLinux: 'linux',
+  onWindows: ['win32'],
+  onMac: ['darwin'],
+  onLinux: ['linux'],
 }
 
 export function patch(currentPlatform) {
   function newDefinition(method, expectedPlatform, fallbackImplem = () => {}) {
-    if (currentPlatform === AVAILABLE_PLATFORMS[expectedPlatform]) {
+    if (AVAILABLE_PLATFORMS[expectedPlatform] && AVAILABLE_PLATFORMS[expectedPlatform].includes(currentPlatform)) {
       return method
     } else {
       return fallbackImplem
