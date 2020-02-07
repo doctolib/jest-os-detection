@@ -3,6 +3,8 @@
   "version": "1.0.9",
   "description": "Allow to specify on which platform to run jest tests",
   "main": "lib/index.js",
+  "homepage": "https://github.com/doctolib/jest-os-detection",
+  "repository": "github:doctolib/jest-os-detection",
   "scripts": {
     "test": "jest",
     "version": "babel src --out-dir lib"
