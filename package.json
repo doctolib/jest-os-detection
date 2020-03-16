@@ -1,6 +1,6 @@
 {
   "name": "jest-os-detection",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Allow to specify on which platform to run jest tests",
   "main": "lib/index.js",
   "homepage": "https://github.com/doctolib/jest-os-detection",
