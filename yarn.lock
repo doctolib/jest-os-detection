@@ -674,8 +674,8 @@
     esutils "^2.0.2"
 
 "@babel/register@^7.0.0", "@babel/register@^7.8.3":
-  version "7.9.0"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.9.0.tgz#02464ede57548bddbb5e9f705d263b7c3f43d48b"
+  version "7.10.3"
+  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.10.3.tgz#b49b6603fc8d214cd2f77a6ed2256bd198b5994b"
   dependencies:
     find-cache-dir "^2.0.0"
     lodash "^4.17.13"
