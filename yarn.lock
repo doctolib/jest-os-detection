@@ -237,10 +237,10 @@
     js-tokens "^4.0.0"
 
 "@babel/node@^7.0.0":
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.8.7.tgz#4213ea99f0c86cc1cf460e61131e7acbb723e13a"
+  version "7.10.3"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.10.3.tgz#38fc470452e7e60f624cb5cf1134436141a2d5f5"
   dependencies:
-    "@babel/register" "^7.8.3"
+    "@babel/register" "^7.10.3"
     commander "^4.0.1"
     core-js "^3.2.1"
     lodash "^4.17.13"
@@ -673,9 +673,9 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/register@^7.0.0", "@babel/register@^7.8.3":
-  version "7.9.0"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.9.0.tgz#02464ede57548bddbb5e9f705d263b7c3f43d48b"
+"@babel/register@^7.0.0", "@babel/register@^7.10.3":
+  version "7.10.3"
+  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.10.3.tgz#b49b6603fc8d214cd2f77a6ed2256bd198b5994b"
   dependencies:
     find-cache-dir "^2.0.0"
     lodash "^4.17.13"
