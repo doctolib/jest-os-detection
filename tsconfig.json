@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "outDir": "./lib",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strict": true,
+    "types": ["node", "jest"]
+  },
+  "include": ["./src/**/*"],
+  "files": [
+    "src/jest.d.ts"
+  ]
+}
