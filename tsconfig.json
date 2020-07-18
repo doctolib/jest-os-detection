@@ -12,6 +12,6 @@
   },
   "include": ["./src/**/*"],
   "files": [
-    "src/jest.d.ts"
+    "index.d.ts"
   ]
 }

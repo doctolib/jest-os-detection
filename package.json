@@ -1,14 +1,14 @@
 {
   "name": "jest-os-detection",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Allow to specify on which platform to run jest tests",
   "main": "lib/index.js",
   "homepage": "https://github.com/doctolib/jest-os-detection",
   "repository": "github:doctolib/jest-os-detection",
-  "types": "lib/index.d.ts",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest",
-    "version": "tsc --declaration src/ --outDir lib"
+    "version": "tsc --declaration src/* --outDir lib"
   },
   "author": "qmenoret",
   "keywords": [
