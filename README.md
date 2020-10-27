@@ -72,3 +72,14 @@ Supported sub-commands:
 * `<command>.<platform>.skip()`
 * `<command>.<platform>.skip.each()`
 * `<command>.<platform>.only.each()`
+
+## TypeScript
+
+To avoid type errors globally, you can add this to your tsconfig:
+```json
+{
+  "files": [
+    "node_modules/jest-os-detection/index.d.ts"
+  ]
+}
+```
