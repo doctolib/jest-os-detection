@@ -1,5 +1,3 @@
-type JestTestOrSuite = jest.Describe | jest.It
-
 interface Command {
   onWindows: ['win32']
   onMac: ['darwin']
@@ -31,13 +29,13 @@ export function patch(currentPlatform: NodeJS.Platform) {
     }
   }
 
-  ;(Object.keys(AVAILABLE_PLATFORMS) as (keyof Command)[]).forEach(platform => {
-    ;[describe, it, test].forEach(method => {
-      method[platform] = newDefinition<JestTestOrSuite>(method, platform, method.skip)
+  ;(Object.keys(AVAILABLE_PLATFORMS) as (keyof Command)[]).forEach((platform) => {
+    ;[describe, it, test].forEach((method) => {
+      method[platform] = newDefinition<typeof method>(method, platform, method.skip)
       method[platform].each = newDefinition<jest.Each>(method.each, platform, method.skip.each)
 
-      methodOperations.forEach(mode => {
-        method[platform][mode] = newDefinition<JestTestOrSuite>(method[mode], platform, method.skip)
+      methodOperations.forEach((mode) => {
+        method[platform][mode] = newDefinition<typeof method>(method[mode], platform, method.skip)
         method[platform][mode].each = newDefinition<jest.Each>(method[mode].each, platform, method.skip.each)
       })
     })
